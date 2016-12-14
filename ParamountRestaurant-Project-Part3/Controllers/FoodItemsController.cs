@@ -10,6 +10,7 @@ using ParamountRestaurant_Project_Part3.Models;
 
 namespace ParamountRestaurant_Project_Part3.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class FoodItemsController : Controller
     {
         private RestaurantContext db = new RestaurantContext();

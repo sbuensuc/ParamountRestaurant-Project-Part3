@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Paramount Bistro</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
@@ -30,7 +30,8 @@
                     <li><a href="@Url.Action("About", "Home") "> About</a></li>
                     <li><a href="@Url.Action("Index", "Menu") "> Menu</a></li>
                     <li><a href="@Url.Action("Contact", "Home") "> Contact Us</a></li>
-                    <li><a href="@Url.Action("Login", "Account") "> Login</a></li>
+                    @*<li><a href="@Url.Action("Login", "Account") "> Login</a></li>*@
+                    <li>@Html.Partial("_LoginPartial")</li>
                 </ul>
                 
             </div>

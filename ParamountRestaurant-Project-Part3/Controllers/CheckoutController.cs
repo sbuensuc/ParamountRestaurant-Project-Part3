@@ -7,7 +7,7 @@ using ParamountRestaurant_Project_Part3.Models;
 
 namespace ParamountRestaurant_Project_Part3.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class CheckoutController : Controller
     {
         private RestaurantContext restaurantDB = new RestaurantContext();

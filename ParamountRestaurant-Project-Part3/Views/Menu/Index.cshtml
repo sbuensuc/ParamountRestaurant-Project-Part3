@@ -17,89 +17,113 @@
 
 <h3>Appetizers</h3>
 <div class="container-fluid">
-            @foreach (FoodItem item in Model)
+    @foreach (FoodItem item in Model)
             {
                 string imagepath = item.FoodId + ".png";
                 if (item.Type == "Appetizer")
                 {
-                <div class="row ">
-                    <div class="picdiv col-md-2">
-                        <a href="@Url.Action("Details", "Menu",  new { id = item.FoodId }) " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+            <div class="row ">
+                <div class="picdiv col-md-2 container">
+
+                    <a href="@Url.Action("Details", "Menu",  new { id = item.FoodId }) " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+
+
+                </div>
+                <div class="col-md-8">
+                    <div class="itemname">
+                        @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
                     </div>
-                    <div class="col-md-8">
-                        <div class="itemname">
-                            @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
-                        </div>
-                        <div class="descript">
-                            @item.Description
-                        </div>
+                    <div class="descript">
+                        @item.Description
                     </div>
-                    <div class="pricediv col-md-2 fill">
+                </div>
+                <div class="pricediv col-md-2 fill container">
+                    <div class="row">
                         $@item.Price
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-warning">
+                            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = item.FoodId }, "")
+                        </button>
+                    </div>
                 </div>
             </div>
-                    }
-                }
+        }
+    }
 
 
-        </div>
+</div>
 <h3>Entrees</h3>
 <div class="container-fluid">
-            @foreach (FoodItem item in Model)
+    @foreach (FoodItem item in Model)
             {
                 string imagepath = item.FoodId + ".png";
                 if (item.Type == "Entree")
                 {
-                    <div class="row ">
-                        <div class="picdiv col-md-2">
-                            <a href="@Url.Action("Index", "Menu") " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="itemname">
-                                @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
-                            </div>
-                            <div class="descript">
-                                @item.Description
-                            </div>
-                        </div>
-                        <div class="pricediv col-md-2 fill">
-                            $@item.Price
-                        </div>
+            <div class="row ">
+                <div class="picdiv col-md-2">
+                    <a href="@Url.Action("Index", "Menu") " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+                </div>
+                <div class="col-md-8">
+                    <div class="itemname">
+                        @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
                     </div>
-                }
-            }
+                    <div class="descript">
+                        @item.Description
+                    </div>
+                </div>
+                <div class="pricediv col-md-2 fill container">
+                    <div class="row">
+                        $@item.Price
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-warning">
+                            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = item.FoodId }, "")
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    }
 
 
-        </div>
+</div>
 
 <h3>Desserts</h3>
 <div class="container-fluid">
-            @foreach (FoodItem item in Model)
-                        {
-                            string imagepath = item.FoodId + ".png";
-                            if (item.Type == "Dessert")
-                            {
-                    <div class="row ">
-                        <div class="picdiv col-md-2">
-                            <a href="@Url.Action("Index", "Menu") " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="itemname">
-                                @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
-                            </div>
-                            <div class="descript">
-                                @item.Description
-                            </div>
-                        </div>
-                        <div class="pricediv col-md-2 fill">
-                            $@item.Price
-                        </div>
+    @foreach (FoodItem item in Model)
+    {
+        string imagepath = item.FoodId + ".png";
+        if (item.Type == "Dessert")
+        {
+            <div class="row ">
+                <div class="picdiv col-md-2">
+                    <a href="@Url.Action("Index", "Menu") " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+                </div>
+                <div class="col-md-8">
+                    <div class="itemname">
+                        @Html.ActionLink(item.Name, "Details", new { id = item.FoodId })
                     </div>
-                }
-            }
+                    <div class="descript">
+                        @item.Description
+                    </div>
+                </div>
+                <div class="pricediv col-md-2 fill container">
+                    <div class="row">
+                        $@item.Price
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-warning">
+                            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = item.FoodId }, "")
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    }
 
 
-        </div>
+</div>
 
 <div class="botdiv"></div>
 
