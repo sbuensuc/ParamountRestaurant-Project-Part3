@@ -19,6 +19,9 @@
     <table id="cartItems">
         <tr>
             <th>
+                
+            </th>
+            <th>
                 Item
             </th>
             <th>
@@ -32,9 +35,13 @@
         @foreach (var item in
                     Model.CartItems)
         {
+            string imagepath = item.FoodId + ".png";
             <tr id="row-@item.RecordId">
                 <td>
-                    @Html.ActionLink(item.FoodItem.Name, "Details", "Store", new { id = item.FoodId }, null)
+                    <a href="@Url.Action("Details", "Menu",  new { id = item.FoodId }) " class="thumbnail"><img src="~/Assets/images/@(imagepath)" /></a>
+                </td>
+                <td>
+                    @Html.ActionLink(item.FoodItem.Name, "Details", "Menu", new { id = item.FoodId }, null)
                 </td>
                 <td>
                     @item.FoodItem.Price
