@@ -1,0 +1,60 @@
+﻿@*Filename: shoppingcart/index
+    Author Name: Sam Buensuceso, Sarina Luu
+    Website Name: http://paramountbistro-part2.azurewebsites.net/
+    File Description: index page for shopping view*@
+
+@model ParamountRestaurant_Project_Part3.ViewModels.ShoppingCartViewModel
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+
+<h3>
+    <em>Review</em> your cart:
+</h3>
+
+    <div id="update-message">
+    </div>
+   <div>
+    <table id="cartItems">
+        <tr>
+            <th>
+                Item
+            </th>
+            <th>
+                Price (each)
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in
+                    Model.CartItems)
+        {
+            <tr id="row-@item.RecordId">
+                <td>
+                    @Html.ActionLink(item.FoodItem.Name, "Details", "Store", new { id = item.FoodId }, null)
+                </td>
+                <td>
+                    @item.FoodItem.Price
+                </td>
+                <td id="item-count-@item.RecordId">
+                    @item.Count
+                </td>
+                <td>
+                    <a href="#" class="RemoveLink" data-id="@item.RecordId"> X Remove from cart</a>
+                </td>
+            </tr>
+        }
+
+       
+    </table>
+       <div id="cart-total">
+           <h3>Total: $ @Model.CartTotal</h3>
+       </div>
+       <p class="button">
+           @Html.ActionLink("Checkout >> ", "AddressAndPayment", "Checkout")
+       </p>
+</div>
+    

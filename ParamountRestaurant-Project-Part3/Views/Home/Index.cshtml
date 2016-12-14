@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section scripts{
+
+    @Scripts.Render("~/bundles/custom")
+
+}
+
+
+
+@*Filename: Home/Index.cshtml
+    Author Name: Sam Buensuceso, Sarina Luu
+    Website Name: http://paramountbistro-part2.azurewebsites.net/
+    File Description: Index page for home view*@
+
+<div id="home_header">
+    <a id="headerimage" href="@Url.Action("Index","Menu")"><img src="~/Assets/images/header_image1.png" /></a>
+
+
+</div>
+<div class="topdiv row"></div>
+
+    <div class="row ">
+        <div class="col-md-4 sidebar">
+            <h4>Welcome to</h4>
+            <img src="~/Assets/images/paramountlogo2.png" />
+            <div class="sidebarinner"><h5>416.555.5354</h5></div>
+            <a href="@Url.Action("Index", "Menu") "><img src="~/Assets/images/menulinklogo.png" /></a>
+</div>
+        <div class="col-md-8 gallery_container">
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <a href="#" class="thumbnail pop">
+                        <img src="~/Assets/images/gallery1.png">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a href="#" class="thumbnail pop">
+                        <img src="~/Assets/images/gallery2.png">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a href="#" class="thumbnail pop">
+                        <img src="~/Assets/images/gallery3.png">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <a href="#" class="thumbnail pop">
+                        <img src="~/Assets/images/gallery4.png">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a href="#" class="thumbnail pop">
+                        <img src="~/Assets/images/gallery5.png">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a href="#" class="thumbnail pop">
+                        <img src="~/Assets/images/gallery6.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="botdiv row"></div>
+

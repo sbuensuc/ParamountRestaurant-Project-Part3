@@ -1,0 +1,270 @@
+﻿/*Filename: site.css
+Author Name: Sam Buensuceso, Sarina Luu
+Website Name: http://paramountbistro-part2.azurewebsites.net/
+File Description: custom css*/ 
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image:url(/Assets/Images/restaurantbg.png);
+    background-size:100%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*CUSTOM CSS*/
+
+/*general css*/
+
+h1 {
+    font-family: 'Century Gothic';
+}
+
+h3 {
+    font-family: 'Century Gothic';
+}
+
+h5 {
+    font-family: 'Century Gothic';
+}
+
+
+#topbar img {
+    height: 100%;
+    width: auto;
+}
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+#body_container{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+    
+}
+#cloud-container{
+    
+    background-color: white;
+}
+
+#home_header img {
+    width: 100%;
+}
+
+.topdiv{
+    background-color: orange;
+    height: 20px;
+}
+
+.botdiv{
+    background-color: orange;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+.row{
+    overflow: hidden; 
+}
+
+
+
+/*Homepage CSS*/
+
+.gallery_container {
+    margin-top: 10px;
+}
+
+.sidebar {
+    background-color: darkslategrey;
+    color: white;
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+
+}
+
+.sidebarinner {
+    text-align:center;
+    margin-bottom: 10px;
+    
+}
+
+/*Menu CSS*/
+
+.itemname {
+    background-color:dimgrey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+    color:white;
+    font-family: 'Century Gothic';
+}
+
+.itemname a:link{
+    color:white;
+}
+
+.itemname a:hover{
+    color:royalblue;
+}
+
+.descript {
+    background-color: darkslategrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:10px;
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.pricediv {
+    
+    background-color:dimgrey;
+    padding-top: 40px;
+    padding-left: 10px;
+    color: white;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    text-align:center;
+
+}
+
+/*details-contact CSS*/
+
+.details {
+    background-color:dimgrey;
+    
+}
+
+.details img{
+    width: 100%;
+    height: auto;
+}
+
+.descriptDetails {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contactmap{
+    text-align:center;
+    margin-bottom:20px;
+    padding-bottom:20px;
+}
+
+.contactmap img{
+    width:100%;
+    height: auto;
+}
+
+.contact_container {
+    padding-left: 20px;
+}
+
+.followUs_Container {
+    text-align:center;
+    width: 100%;
+}
+
+.followUs_Container img {
+    width: 100%;
+    height:auto;
+}
+
+/*Cart CSS*/
+.RemoveLink {
+    float: right;
+}
+
+#cartItems {
+   text-align: center; 
+   margin-left: auto;
+   margin-right: auto;
+   width: 700px; 
+}
+
+#cartItems td {
+    width: 100px;
+    
+}
+
+#cartItems th{
+    text-align: center;
+}
+
+#cart-total {
+    padding-top: 30px;
+    text-align: right;
+}
+
+.button{
+    text-align: right;
+}
+
+/*About CSS*/
+#aboutBlurb{
+    text-align: center;
+    font-size: 16px;
+}
+#awards{
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 50px;
+    width: 940px;
+}
+#awards img {
+    width: 200px;
+    height: 180px; 
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+#reviews {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+#reviews p {
+    padding-left: 25px;
+    font-family: 'Yellowtail', cursive;
+    font-size: 30px;
+    text-align: left;
+}
+
+#reviews h4 {
+    text-align: right;
+    padding-right: 25px;
+}

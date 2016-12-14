@@ -1,0 +1,69 @@
+﻿@*Filename: layout
+    Author Name: Sam Buensuceso, Sarina Luu
+    Website Name: http://paramountbistro-part2.azurewebsites.net/
+    File Description: shared layout*@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div id="topbar" class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="headernavimage" class="navbar-brand" href="@Url.Action("Index","Home")"><img src="~/Assets/images/paramountlogo.png" alt="..."/></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("Index", "Home") "> Home</a></li>
+                    <li><a href="@Url.Action("About", "Home") "> About</a></li>
+                    <li><a href="@Url.Action("Index", "Menu") "> Menu</a></li>
+                    <li><a href="@Url.Action("Contact", "Home") "> Contact Us</a></li>
+                    <li><a href="@Url.Action("Login", "Account") "> Login</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    <div id="body_container" class="container body-content">
+        <div class="row">
+        <div id="cloud-container" class="col-md-offset-2 col-md-8">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Paramount Bistro - Comp229 - Project Part 2 - Sam Buensuceso | Sarina Luu</p>
+            </footer>
+        </div>
+        </div>
+    </div>
+
+    @*Hidden modal div for larger gallery image*@
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <img src="" class="imagepreview" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

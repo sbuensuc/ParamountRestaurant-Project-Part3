@@ -1,0 +1,14 @@
+﻿@*Filename: complete
+    Author Name: Sam Buensuceso, Sarina Luu
+    Website Name: http://paramountbistro-part2.azurewebsites.net/
+    File Description: completed checkout for checkout view*@
+
+@model int
+@{
+    ViewBag.Title = "Checkout Complete";
+}
+<h2>Checkout Complete</h2>
+<p>Thanks for your order! Your order number is: @Model</p>
+<p>
+    <a href="@Url.Action("Index", "Home") "> Home</a>
+</p>

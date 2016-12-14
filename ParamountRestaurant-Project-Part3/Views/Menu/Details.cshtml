@@ -1,0 +1,36 @@
+﻿@*Filename: menu/details.cshtml
+    Author Name: Sam Buensuceso, Sarina Luu
+    Website Name: http://paramountbistro-part2.azurewebsites.net/
+    File Description: details page for menu view*@
+
+@model ParamountRestaurant_Project_Part3.Models.FoodItem
+@{
+    ViewBag.Title = Model.Name;
+    string imagepath = Model.FoodId + ".png";
+}
+
+
+<h1>@Model.Name</h1>
+<div class="topdiv"></div>
+<div class="details container-fluid">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <a href="@Url.Action("Index", "Menu") "><img src="~/Assets/images/@(imagepath)" /></a>
+        </div>
+    </div>
+    <div class="row descriptDetails">
+        <div>
+            @Model.Description
+            <br />
+            <h6>(click image to return to menu)</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-5">
+            <button type="button" class="btn btn-warning">
+                @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.FoodId }, "")
+            </button>
+        </div>
+    </div>
+</div>
+
