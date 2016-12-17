@@ -93,6 +93,11 @@ html{
 
 /*Homepage CSS*/
 
+#home_header {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
 .gallery_container {
     margin-top: 10px;
 }
@@ -185,7 +190,7 @@ html{
 }
 
 .contactmap img{
-    width:100%;
+    width:50%;
     height: auto;
 }
 
